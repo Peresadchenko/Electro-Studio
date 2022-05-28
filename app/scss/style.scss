@@ -1,0 +1,200 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "reset";
+@import "global";
+
+.header {
+    margin: 20px 0 20px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        &__img {
+            max-width: 200px;
+        }
+    }
+    .menu {
+        &__list {
+            display: flex;
+        }
+        &__list-item {
+            margin-right: 40px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__list-link {
+            color: $text;
+            padding-bottom: 3px;
+            transition: all 0.5s;
+            &:hover {
+                color: $title;
+                border-bottom: 1px solid $title;
+            }
+        }
+    }
+}
+
+.top {
+    &__wrapper {
+        margin-top: -80px;
+        background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%);
+    }
+    &__img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 800px;
+        margin: 0 auto;
+        object-fit: cover; // background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%);
+    }
+    &__content-inner {
+        max-width: 670px;
+        margin: 0 auto;
+    }
+    &__content-title {
+        @extend %Lighthaus-400;
+        padding-top: 280px;
+        padding-bottom: 390px;
+        text-align: center;
+        font-size: 42px;
+        line-height: 48px;
+        color: $title;
+        text-transform: uppercase;
+    }
+    &__content-contact {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content-link {
+        margin-top: -60px;
+        margin-bottom: 20px;
+        padding-bottom: 60px;
+        font-size: 18px;
+        line-height: 21px;
+        color: $text;
+        transition: all 0.5s;
+        &:hover {
+            color: $title;
+        }
+    }
+    .content-link__nav {
+        padding-left: 40px;
+        position: relative;
+        transition: all 0.5s;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: -3px;
+            left: 10px;
+            background: no-repeat center url("../images/icons/nav.png");
+            transition: all 0.5s;
+        }
+        &:hover::after {
+            background: no-repeat center url("../images/icons/nav-hov.png");
+        }
+    }
+    .content-link__phone {
+        padding-left: 40px;
+        position: relative;
+        transition: all 0.5s;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: -3px;
+            left: 10px;
+            background: no-repeat center url("../images/icons/phone-call.png");
+            transition: all 0.5s;
+        }
+        &:hover::after {
+            background: no-repeat center url("../images/icons/phone-call-hov.png");
+        }
+    }
+}
+
+.benefits {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+    &__item {
+        margin: 70px 0 90px;
+        max-width: 150px;
+    }
+    &__item-img {
+        width: 80px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    &__item-text {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+.gallery {
+    padding-bottom: 50px;
+    &__title {
+        margin-bottom: 50px;
+    }
+    .gallery-slider {
+        
+        &__item {
+            max-width: 535px;
+            max-height: 320px;
+        }
+        &__item-img {
+            max-width: 535px;
+            max-height: 320px;
+            object-fit: cover;
+        }
+    }
+}
+
+.enroll {
+    margin-bottom: 50px;
+    &__title {
+        margin-bottom: 50px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__inner-text {
+        max-width: 500px;
+    }
+    &__form {
+    }
+    &__form-input {
+        width: 255px;
+        height: 50px;
+        margin-bottom: 35px;
+        margin-left: 30px;
+        text-align: center;
+        border: none;
+        background-color: #fff;
+        color: #000;
+        opacity: 20%;
+    }
+    &__form-text {
+        margin-left: 30px;
+        margin-top: -15px;
+        font-size: 13px;
+        display: inline-block;
+        width: 255px;
+    }
+    &__form-btn {
+        margin-left: 30px;
+        display: inline-block;
+    }
+}
+
+@import "media";

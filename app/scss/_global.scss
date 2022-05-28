@@ -1,0 +1,56 @@
+body {
+    @extend %Inter-400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text;
+    background-color: $default;
+}
+
+.container {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.title {
+    @extend %Lighthaus-400;
+    font-size: 36px;
+    line-height: 48px;
+    color: $title;
+}
+
+.btn {
+    display: block;
+    width: 255px;
+    height: 50px;
+    border: none;
+    font-size: 16px;
+    line-height: 27px;
+    color: $text;
+    background-color: $title;
+    text-transform: uppercase;
+}
+
+.gallery-slider {
+    position: relative;
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        font-size: 0;
+        margin: 45px 0;
+    }
+    .slick-dots button {
+        width: 12px;
+        height: 12px;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+    }
+    .slick-active button {
+        background: linear-gradient(92.09deg, #5e3928 -79.4%, #d4c17f 84.12%);
+    }
+    .slick-dots li + li {
+        margin-left: 10px;
+    }    
+    
+}
