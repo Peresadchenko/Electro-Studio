@@ -1,25 +1,31 @@
-$default: #242B33;
-$title: #D4C17F;
+$default: #242b33;
+$title: #d4c17f;
 $text: #fff;
-$btn: #D4C17F;
-
+$btn: #d4c17f;
 
 %Inter-700 {
-    font-family: "Inter-Bold";
-    font-weight: 700;
-  }
-  
-  %Inter-500 {
-    font-family: "Inter-Medium";
-    font-weight: 500;
-  }
-  
-  %Inter-400 {
-    font-family: "Inter-Regular";
-    font-weight: 400;
-  }
+  font-family: "Inter-Bold";
+  font-weight: 700;
+}
 
-  %Lighthaus-400 {
-    font-family: "Lighthaus";
-    font-weight: 400;
-  }
+%Inter-500 {
+  font-family: "Inter-Medium";
+  font-weight: 500;
+}
+
+%Inter-400 {
+  font-family: "Inter-Regular";
+  font-weight: 400;
+}
+
+%Lighthaus-400 {
+  font-family: "Lighthaus";
+  font-weight: 400;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
