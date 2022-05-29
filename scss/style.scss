@@ -1,0 +1,408 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "reset";
+@import "global";
+
+.header {
+    margin: 20px 0 20px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        &__img {
+            max-width: 200px;
+        }
+    }
+    .menu {
+        &__list {
+            display: flex;
+        }
+        &__list-item {
+            margin-right: 40px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__list-link {
+            color: $text;
+            padding-bottom: 3px;
+            transition: all 0.5s;
+            &:hover {
+                color: $title;
+                border-bottom: 1px solid $title;
+            }
+        }
+    }
+}
+
+.top {
+    &__wrapper {
+        margin-top: -80px;
+        background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%);
+    }
+    &__img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 800px;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+    &__content-inner {
+        max-width: 670px;
+        margin: 0 auto;
+    }
+    &__content-title {
+        @extend %Lighthaus-400;
+        padding-top: 387px;
+        padding-bottom: 355px;
+        text-align: center;
+        font-size: 42px;
+        line-height: 48px;
+        color: $title;
+        text-transform: uppercase;
+    }
+    &__content-contact {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content-link {
+        margin-top: -60px;
+        margin-bottom: 20px;
+        padding-bottom: 60px;
+        font-size: 18px;
+        line-height: 21px;
+        color: $text;
+        transition: all 0.5s;
+        &:hover {
+            color: $title;
+        }
+    }
+    .content-link__nav {
+        padding-left: 40px;
+        position: relative;
+        transition: all 0.5s;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: -3px;
+            left: 10px;
+            background: no-repeat center url("../images/icons/nav.png");
+            transition: all 0.5s;
+        }
+        &:hover::after {
+            background: no-repeat center url("../images/icons/nav-hov.png");
+        }
+    }
+    .content-link__phone {
+        padding-left: 40px;
+        position: relative;
+        transition: all 0.5s;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: -3px;
+            left: 10px;
+            background: no-repeat center url("../images/icons/phone-call.png");
+            transition: all 0.5s;
+        }
+        &:hover::after {
+            background: no-repeat center url("../images/icons/phone-call-hov.png");
+        }
+    }
+}
+
+.benefits {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+    &__item {
+        margin: 70px 0 90px;
+        max-width: 150px;
+    }
+    &__item-img {
+        width: 80px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    &__item-text {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+.gallery {
+    padding-bottom: 50px;
+    .gallery-slider {
+        &__item {
+            max-width: 535px;
+            max-height: 320px;
+        }
+        &__item-img {
+            max-width: 535px;
+            max-height: 320px;
+            object-fit: cover;
+        }
+    }
+}
+
+.enroll {
+    margin-bottom: 50px;
+    &__title {
+        margin-bottom: 50px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__inner-text {
+        max-width: 500px;
+    }
+    &__form-text {
+        margin-left: 30px;
+        margin-top: -15px;
+        font-size: 12px;
+        display: inline-block;
+        width: 255px;
+    }
+    &__form-btn {
+        margin-left: 30px;
+        display: inline-block;
+    }
+}
+
+.video {
+    &__wrapper {
+        position: relative;
+        background: linear-gradient(0deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%);
+    }
+    &__popup {
+        margin: 0 auto;
+        width: 720px;
+        height: 450px;
+        position: relative;
+        z-index: -1;
+    }
+    &__link-btn {
+        width: 95px;
+        position: absolute;
+        top: 43%;
+        right: 47%;
+        cursor: pointer;
+        opacity: 60%;
+        transition: all 0.5s;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.info {
+    margin-bottom: 50px;
+    &__item-image {
+        position: relative;
+    }
+    &__item-img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        opacity: 70%;
+        margin-bottom: 20px;
+        object-position: center;
+    }
+    &__item-title {
+        position: absolute;
+        bottom: 25px;
+        left: 30px;
+        width: 100%;
+        font-size: 26px;
+        line-height: 30px;
+        color: $text;
+    }
+    &__item-date {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 9px 13px;
+        font-size: 18px;
+        line-height: 17px;
+        color: $text;
+        background-color: $title;
+    }
+    &__item-text {
+        margin-bottom: 15px;
+        line-height: 20px;
+    }
+    &__item-link {
+        color: $title;
+        position: relative;
+    }
+    &__item-textTitle {
+        color: $title;
+        font-size: 18px;
+    }
+}
+.info-detalis {
+    &__item {
+        margin-bottom: 50px;
+    }
+    &__img {
+        max-height: 800px;
+    }
+}
+
+.reviews {
+    margin-bottom: 50px;
+    &__title-box {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title-link {
+        font-size: 20px;
+        color: $text;
+        transition: all 0.5s;
+        &:hover {
+            color: $title;
+        }
+    }
+    .reviews-slider {
+        &__item {
+            margin: 15px 10px;
+            max-width: 321px;
+            max-height: 321px;
+            width: 100%;
+            height: 100%;
+            padding: 50px 30px;
+            border: 1px solid $title;
+            border-radius: 3px;
+            text-align: center;
+            transition: all 0.5s;
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+        }
+        &__item-title {
+            @extend %Inter-700;
+            font-size: 26px;
+            color: $title;
+            margin-bottom: 15px;
+        }
+        &__item-date {
+            color: $title;
+            margin-bottom: 20px;
+        }
+        &__item-content {
+            font-size: 15px;
+            line-height: 19px;
+            color: $title;
+            opacity: 70%;
+        }
+        &__item-add {
+            padding: 50px 0;
+            max-width: 128px;
+            margin: 0 auto;
+        }
+    }
+}
+.all-reviews__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+.reviews-feedback {
+    max-width: 544px;
+    &__form-input {
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    &__form-textarea {
+        width: 100%;
+        height: 200px;
+        padding: 20px;
+        margin-bottom: 30px;
+        opacity: 20%;
+        transition: all .5s;
+        &:hover {
+            opacity: 80%;
+        }
+    }
+}
+
+.map {
+    margin-bottom: 100px;
+    &__iframe {
+        opacity: 60%;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5s;
+        &:hover {
+            opacity: 90%;
+        }
+    }
+}
+
+.questions {
+    margin-bottom: 50px;
+    &__form-text {
+        font-size: 12px;
+        display: inline-block;
+        width: 245px;
+    }
+    &__form-input {
+        margin-left: 20px;
+    }
+    &__form-btn {
+        display: inline-block;
+        margin-left: 20px;
+    }
+}
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    background: #2d343c;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    &__box-item {
+        margin-bottom: 15px;
+    }
+    &__box-link {
+        font-size: 14px;
+        line-height: 16px;
+        color: $text;
+        transition: all 0.5s;
+        &:hover {
+            color: $title;
+            border-bottom: 1px solid $title;
+        }
+    }
+    &__social {
+        display: flex;
+    }
+    &__social-link {
+        margin-right: 20px;
+    }
+    &__social-img {
+        max-width: 28px;
+        opacity: 60%;
+        transition: all 0.5s;
+        &:hover {
+            opacity: 100%;
+        }
+    }
+}
+
+@import "media";

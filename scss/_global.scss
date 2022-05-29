@@ -1,0 +1,133 @@
+body {
+    @extend %Inter-400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text;
+    background-color: $default;
+}
+
+.container {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.title {
+    @extend %Lighthaus-400;
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 48px;
+    color: $title;
+}
+
+.btn {
+    display: block;
+    width: 255px;
+    height: 50px;
+    border: none;
+    font-size: 16px;
+    line-height: 27px;
+    color: $text;
+    background-color: $title;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 1s;
+    &:hover {
+        border-radius: 3px;
+        background: center no-repeat url("../images/gradient.jpg");
+        color: $default;
+    }
+}
+
+.input {
+    width: 255px;
+    height: 50px;
+    margin-bottom: 35px;
+    margin-left: 30px;
+    text-align: center;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    opacity: 20%;
+    transition: all .5s;
+    &:hover {
+        opacity: 80%;
+    }
+}
+
+.link-btn {
+    padding-right: 15px;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        right: 0;
+        width: 8px;
+        height: 8px;
+        background: no-repeat url(../images/icons/down-chevron.png);
+    }
+}
+
+// breadcrumbs-------------------------------------------
+
+.breadcrumbs {
+    padding-top: 40px;
+    margin-bottom: 30px;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        padding-right: 30px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url("../images/icons/slash.png");
+            width: 24px;
+            height: 24px;
+            top: -4px;
+            right: 4px;
+        }
+        &:last-child {
+            .breadcrumbs__link {
+                color: $title;
+            }
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &__link {
+        font-size: 18px;
+        font-weight: 600;
+        color: $text;
+    }
+}
+
+.gallery-slider,
+.reviews-slider,
+.info-slider {
+    position: relative;
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        font-size: 0;
+        margin: 45px 0;
+    }
+    .slick-dots button {
+        width: 12px;
+        height: 12px;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+    }
+    .slick-active {
+    }
+    .slick-active button {
+        background: linear-gradient(92.09deg, #5e3928 -79.4%, #d4c17f 84.12%);
+    }
+    .slick-dots li + li {
+        margin-left: 10px;
+    }
+}
