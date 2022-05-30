@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <nav class="container">
       <div class="header__inner">
         <div class="logo">
@@ -195,11 +195,14 @@
               <a class="info__item-link" href="info-detalis-02.html">
                 <div class="info__item-image">
                   <img class="info__item-img" src="images/info-img-2.jpg" alt="фото новостей">
-                  <p class="info__item-title">Почему же волоски уходят не за 1 сеанс, не смотря на то , что утверждение, что волосы уходят навсегда верно?</p>
+                  <p class="info__item-title">Почему же волоски уходят не за 1 сеанс, не смотря на то , что утверждение,
+                    что волосы уходят навсегда верно?</p>
                   <p class="info__item-date">27.03.22</p>
                 </div>
               </a>
-              <p class="info__item-text">Все дело в том, что волосы растут циклично и не синхронно. Каждый волос входит в цикл активного роста (анаген), далее волосяная луковица сжимается и питание волоса из дермального сосочка сокращается (катаген) и уже после наступает стадия покоя.....
+              <p class="info__item-text">Все дело в том, что волосы растут циклично и не синхронно. Каждый волос входит
+                в цикл активного роста (анаген), далее волосяная луковица сжимается и питание волоса из дермального
+                сосочка сокращается (катаген) и уже после наступает стадия покоя.....
               </p>
               <a class="info__item-link link-btn" href="info-detalis-02.html">Читать больше</a>
             </div>
@@ -212,9 +215,11 @@
                   <p class="info__item-date">26.05.22</p>
                 </div>
               </a>
-              <p class="info__item-text">Однозначного ответа тут не будет, потому что у каждого человека свой болевой порог.
+              <p class="info__item-text">Однозначного ответа тут не будет, потому что у каждого человека свой болевой
+                порог.
 
-                Если Вы решили разделаться с ненавистной растительностью навсегда, ВОЗМОЖНО, Вам понадобится обезболивание......
+                Если Вы решили разделаться с ненавистной растительностью навсегда, ВОЗМОЖНО, Вам понадобится
+                обезболивание......
               </p>
               <a class="info__item-link link-btn" href="info-detalis-03.html">Читать больше</a>
             </div>
@@ -291,6 +296,30 @@
     </div>
   </section>
 
+  <section class="promotion">
+    <div class="container">
+      <p class="promotion__title title">Позвони сейчас и получи скидку</p>
+      <div class="promotion__inner">
+
+        <div class="timer">
+          <p class="timer__title">Осталось:</p>
+          <div class="timer__inner">
+            <div class="timer__box">
+              <p class="timer__item"></p>
+              <p class="timer__item"></p>
+              <p class="timer__item"></p>
+            </div>
+            <span class="timer__num" id="timer"></span>
+          </div>
+          <span class="timer__off" id="timerTextOff"></span>
+        </div>
+
+        <a class="promotion__link" href="tel:89613007002">ПОЗВОНИТЬ</a>
+
+      </div>
+    </div>
+  </section>
+
   <section class="map">
     <div class="container">
       <div class="map__inner">
@@ -325,6 +354,7 @@
   </section>
 
   <footer class="footer">
+    <a class="footer__btn" href="#header"></a>
     <div class="container">
       <div class="footer__inner">
         <div class="logo">
