@@ -226,18 +226,13 @@ $(function () {
 
     }
 
-    $(".footer__btn").on("click", function (e) {
+    $(".footer__btn, .menu__link-id").on("click", function (e) {
         e.preventDefault();
         var id = $(this).attr("href"),
             top = $(id).offset().top;
         $('body,html').animate({ scrollTop: top }, 1500);
     });
 
-    $(".menu a").on("click", function (e) {
-        e.preventDefault();
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({ scrollTop: top }, 1500);
-    });
+    
 });
 
