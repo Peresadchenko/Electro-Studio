@@ -1,3 +1,254 @@
-// @media (max-width: 1150px) {
+@media (max-width: 1050px) {
+    .gallery {
+        &__item {
+            max-width: 400px;
+        }
+        &__item-img {
+            max-width: 400px;
+        }
+    }
+}
 
-// }
+@media (max-width: 950px) {
+    .benefits {
+        &::after {
+            width: 100%;
+        }
+        &__item {
+            margin: 10px 0 90px;
+        }
+        &__item-img {
+            width: 60px;
+            margin-bottom: 30px;
+        }
+        &__item-text {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .header {
+        .menu {
+            margin: 0;
+            &__list {
+                transform: translateY(-2000px);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 332px;
+                height: 100vh;
+                align-items: center;
+                flex-direction: column;
+                justify-content: normal;
+                margin: 0;
+                z-index: 5;
+                transition: all 0.3s;
+                &.menu__list--active {
+                    max-height: 100vh;
+                    align-items: flex-start;
+                    transform: translateY(0px);
+                    background-color: $default;
+                    transition: all 0.3s;
+                    .menu__list-item {
+                        margin-bottom: 30px;
+                        margin-left: 50px;
+                        &:first-child {
+                            margin-top: 50px;
+                        }
+                    }
+                    .menu__list-link {
+                        color: #fff;
+                        margin-bottom: 50px;
+                        &:hover {
+                            color: $title;
+                            border-bottom: 1px solid $title;
+                        }
+                    }
+                }
+            }
+            &__btn {
+                margin-bottom: 30px;
+                margin-top: 20px;
+                width: 40px;
+                height: 20px;
+                border: none;
+                background-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                padding: 0;
+                z-index: 10;
+                cursor: pointer;
+                span {
+                    width: 22px;
+                    height: 3px;
+                    border-radius: 5px;
+                    background-color: $title;
+                    top: 10px;
+                    transition: all 0.3s;
+                }
+                &::after,
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 22px;
+                    height: 3px;
+                    border-radius: 5px;
+                    background-color: $title;
+                    transition: all 0.3s;
+                }
+                &::before {
+                    top: 0;
+                }
+                &::after {
+                    bottom: 0;
+                }
+            }
+        }
+        .menu--open {
+            .menu__btn {
+                &::before {
+                    transform: rotate(45deg);
+                    top: 9px;
+                    background-color: $title;
+                }
+                &::after {
+                    transform: rotate(-45deg);
+                    top: 9px;
+                    background-color: $title;
+                }
+                span {
+                    transform: scale(0);
+                    background-color: $title;
+                }
+            }
+        }
+    }
+
+    .top {
+        &__content-title {
+            padding-top: 230px;
+            padding-bottom: 230px;
+        }
+        &__wrapper {
+            &::after {
+                height: 100%;
+            }
+        }
+        &__img {
+            height: 100%;
+        }
+    }
+
+    .benefits {
+        &__list {
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        &__item {
+            max-width: none;
+            width: 225px;
+            margin: 10px 0 40px;
+        }
+    }
+
+    
+}
+
+@media (max-width: 700px) {
+    .benefits {
+        &__item {
+            max-width: 175px;
+        }
+    }
+    .footer {
+        &__inner {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .top {
+        &__wrapper {
+            &::after {
+                background-size: 250%;
+            }
+        }
+        &__content-title {
+            margin: 0 auto;
+            max-width: 355px;
+            font-size: 32px;
+        }
+        &__content-link {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .top {
+        &__content-title {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            max-width: 300px;
+            line-height: 30px;
+            font-size: 22px;
+        }
+        &__content-contact {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__content-link {
+            margin-top: -25px;
+            margin-bottom: 0;
+            padding-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .top {
+        &__wrapper {
+            &::after {
+                background-size: 350%;
+            }
+        }
+    }
+
+    .gallery {
+        .gallery-slider {
+            &__item {
+                max-width: none;
+                width: 250px;
+            }
+            &__item-img {
+                max-width: none;
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+
+    .benefits {
+        &__item {
+            max-width: 135px;
+            padding: 0;
+        }
+        &__item-text {
+            max-width: 120px;
+            font-size: 14px;
+        }
+    }
+
+    .footer {
+        &__inner-box {
+            flex-direction: column;
+        }
+        &__box {
+            margin-bottom: 20px;
+        }
+    }
+}

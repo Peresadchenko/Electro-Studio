@@ -2,10 +2,16 @@ $(function () {
 
     // _____________MENU________________
 
-    $('.menu__btn').on('click', function () {
-        $('.menu__list').toggleClass('menu__list--active');
-        $('.menu').toggleClass('menu--open');
-    });
+    const menuOpen = document.querySelector('.menu');
+    const menuList = document.querySelector('.menu__list');
+
+    function toggleMenuOpen() {
+        menuOpen.classList.toggle('menu--open');
+        menuList.classList.toggle('menu__list--active');
+
+    }
+
+    menuOpen.addEventListener('click', toggleMenuOpen);
 
     // _____________gallery-slider________________
 
@@ -14,41 +20,15 @@ $(function () {
             {
                 breakpoint: 1050,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1.5,
                     slidesToScroll: 1
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 850,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: true,
-                    centerPadding: '120px',
-                }
-            },
-            {
-                breakpoint: 650,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: true,
-                    centerPadding: '60px',
-                }
-            },
-            {
-                breakpoint: 500,
-                settings: {
-                    slidesToShow: 1,
-                    centerMode: true,
-                    centerPadding: '30px',
-                }
-            },
-            {
-                breakpoint: 450,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
+                    slidesToScroll: 1
                 }
             }
         ],
@@ -233,6 +213,6 @@ $(function () {
         $('body,html').animate({ scrollTop: top }, 1500);
     });
 
-    
+
 });
 

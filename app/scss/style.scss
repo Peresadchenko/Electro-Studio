@@ -10,13 +10,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-    .logo {
-        z-index: 1;
-        &__img {
-            max-width: 200px;
-        }
-    }
+    }    
     .menu {
         z-index: 1;
         &__list {
@@ -37,11 +31,16 @@
                 border-bottom: 1px solid $title;
             }
         }
+        &__btn {
+            display: none;
+        }
     }
 }
 
 .top {
     &__wrapper {
+        margin-top: -80px;
+        background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 88%);
         position: relative;
         &::after {
             content: "";
@@ -55,8 +54,6 @@
             background: no-repeat center url("../images/bg-gif.gif");
             background-size: 150%;
         }
-        margin-top: -80px;
-        background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%);
     }
     &__img {
         position: absolute;
@@ -86,8 +83,7 @@
     }
     &__content-link {
         margin-top: -60px;
-        margin-bottom: 20px;
-        padding-bottom: 60px;
+        margin-bottom: 100px;
         font-size: 18px;
         line-height: 21px;
         color: $text;
@@ -155,7 +151,8 @@
     }
     &__item {
         margin: 70px 0 90px;
-        max-width: 150px;
+        max-width: 175px;
+        padding: 0 15px;
     }
     &__item-img {
         width: 80px;
@@ -171,14 +168,21 @@
 .gallery {
     padding-bottom: 50px;
     .gallery-slider {
+        &__inner {
+            margin: 0 -15px;
+        }
         &__item {
+            margin-left: 30px;
             max-width: 535px;
             max-height: 320px;
         }
         &__item-img {
             max-width: 535px;
             max-height: 320px;
+            width: 100%;
             object-fit: cover;
+            opacity: 60%;
+            transition: all 0.5s;
         }
     }
 }
@@ -256,7 +260,7 @@
         width: 100%;
         max-height: 300px;
         object-fit: cover;
-        opacity: 70%;
+        opacity: 60%;
         margin-bottom: 20px;
         object-position: center;
     }
@@ -307,14 +311,14 @@
     &::after {
         content: "";
         position: absolute;
-        bottom: 0;
+        top: 0;
         right: 0;
         width: 900px;
         height: 400px;
         z-index: -1;
         opacity: 20%;
         background: no-repeat center url("../images/bg2.png");
-        background-size: 60%;
+        background-size: 40%;
     }
     &__title-box {
         display: flex;
@@ -400,9 +404,7 @@
         display: block;
         margin: 0 auto;
         max-width: 215px;
-        padding: 10px;
-        padding-right: 24px;
-        padding-left: 5px;
+        padding: 15px 30px 15px 5px;
         text-align: center;
         margin-bottom: 50px;
         font-size: 25px;
@@ -415,8 +417,8 @@
         &::after {
             content: "";
             position: absolute;
-            top: 4px;
-            right: 6px;
+            top: 9px;
+            right: 10px;
             width: 24px;
             height: 24px;
             background: center no-repeat url(../images/icons/tel.png);
@@ -554,7 +556,6 @@
         border-radius: 20px;
         background-color: $text;
         padding: 16px 20px;
-        transition: all 0.5s;
         animation: animate_grow 1s infinite, pulse 1s infinite;
     }
     &__top-address {
@@ -624,10 +625,31 @@
     padding-bottom: 50px;
     background: #2d343c;
     position: relative;
+    .help {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        z-index: 5;
+        border-radius: 50%;
+        padding: 10px;
+        animation: animate_grow 1s infinite, pulse 1s infinite;
+        &__img {
+            width: 40px;
+        }
+    }
+    .logo {
+        margin-bottom: 30px;
+    }
     &__inner {
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
+    }
+    &__inner-box {
+        display: flex;
+        justify-content: space-between;
+        max-width: 600px;
+        width: 100%;
     }
     &__box {
         padding-right: 50px;
