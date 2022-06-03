@@ -168,19 +168,16 @@
 .gallery {
     padding-bottom: 50px;
     .gallery-slider {
-        &__inner {
-            margin: 0 -15px;
-        }
         &__item {
-            margin-left: 30px;
-            max-width: 535px;
+            max-width: 500px;
             max-height: 320px;
+            margin: 0 15px;
         }
         &__item-img {
-            max-width: 535px;
-            max-height: 320px;
-            min-height: 320px;
+            margin-left: 15px;
+            // max-width: 535px;
             width: 100%;
+            height: 320px;
             object-fit: cover;
             opacity: 80%;
             transition: all 0.5s;
@@ -256,10 +253,6 @@
 
 .info {
     margin-bottom: 50px;
-    // &__item {
-    //     height: 450px;
-    //     max-height: 450px;
-    // }
     &__item-image {
         position: relative;
     }
@@ -343,9 +336,9 @@
         &__item {
             margin: 15px 10px;
             max-width: 321px;
-            max-height: 321px;
+            max-height: auto;
+            min-height: 320px;
             width: 100%;
-            height: 100%;
             padding: 50px 30px;
             border: 1px solid $title;
             border-radius: 3px;
@@ -382,6 +375,8 @@
 .all-reviews__inner {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+
 }
 .reviews-feedback {
     max-width: 544px;
