@@ -133,13 +133,16 @@
         <p class="enroll__inner-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem
           Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный
           печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
-        <form class="enroll__form" action="#">
-          <input class="enroll__form-input input" required placeholder="Ваше имя" type="text" name="name">
-          <input class="enroll__form-input input" required placeholder="Ваш телефон" type="tel" name="tel">
+        
+          <form class="enroll__form form__body" id="form" action="#">
+          <input class="enroll__form-input input _req" id="formName" placeholder="Ваше имя" type="text" name="name">
+          <input class="enroll__form-input input _req _email" id="formEmail" placeholder="Ваш E-mail" type="email" name="email">
           <p class="enroll__form-text">*Мы никому не передаем ваши данные.
             И не сохраняем ваш номер в базу.</p>
           <button class="enroll__form-btn btn" type="submit">записаться</button>
+          <!-- <a class="enroll__form-btn btn" href="https://api.whatsapp.com/send?phone=79185650703">записаться</a> -->
         </form>
+
       </div>
     </div>
   </section>

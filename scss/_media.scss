@@ -11,6 +11,8 @@
     }
 }
 
+// ____________1050px____________________
+
 @media (max-width: 1050px) {
     .gallery {
         &__item {
@@ -21,6 +23,8 @@
         }
     }
 }
+
+// ____________950px____________________
 
 @media (max-width: 950px) {
     .benefits {
@@ -92,7 +96,16 @@
             align-items: center;
         }
     }
+
+    .gallery-slider {
+        &__item,
+        &__item-img {
+            max-width: 100%;
+        }
+    }
 }
+
+// ____________850px____________________
 
 @media (max-width: 850px) {
     .header {
@@ -221,6 +234,20 @@
         }
     }
 
+    .gallery {
+        .gallery-slider {
+            &__item {
+                max-width: none;
+            }
+            &__item-img {
+                max-width: auto;
+                min-height: auto;
+                width: 90%;
+                height: 350px;
+            }
+        }
+    }
+
     .contact {
         &__form-box {
             margin: 30px auto;
@@ -265,6 +292,8 @@
         }
     }
 }
+
+// ____________650px____________________
 
 @media (max-width: 650px) {
     .top {
@@ -362,6 +391,8 @@
     }
 }
 
+// ____________500px____________________
+
 @media (max-width: 500px) {
     .top {
         &__content-title {
@@ -406,6 +437,8 @@
     }
 }
 
+// ____________450px____________________
+
 @media (max-width: 450px) {
     .title {
         margin-bottom: 30px;
@@ -433,7 +466,7 @@
             &__item-img {
                 max-width: auto;
                 min-height: auto;
-                width: 250px;
+                width: 90%;
                 height: 250px;
             }
         }
@@ -463,9 +496,16 @@
         }
         .reviews-slider__item {
             margin: 15px 0;
+            max-width: 100%;
             &:hover {
                 transform: scale(1);
             }
+        }
+    }
+
+    .all-reviews__inner {
+        .reviews-slider__item {
+            width: 100%;
         }
     }
 
