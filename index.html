@@ -101,14 +101,14 @@
           </div>
 
           <div class="gallery-slider__item">
+            <img class="gallery-slider__item-img" src="images/gallery/gallery-01.webp" alt="">
+          </div>
+
+          <div class="gallery-slider__item">
             <img class="gallery-slider__item-img" src="images/gallery/gallery-02.webp" alt="">
           </div>
 
-          <div class="gallery-slider__item">
-            <img class="gallery-slider__item-img" src="images/gallery/gallery-03.webp" alt="">
-          </div>
-
-          <div class="gallery-slider__item">
+          <!-- <div class="gallery-slider__item">
             <img class="gallery-slider__item-img" src="images/gallery/gallery-04.webp" alt="">
           </div>
 
@@ -118,7 +118,7 @@
 
           <div class="gallery-slider__item">
             <img class="gallery-slider__item-img" src="images/gallery/gallery-06.webp" alt="">
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -133,10 +133,11 @@
         <p class="enroll__inner-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem
           Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный
           печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. </p>
-        
-          <form class="enroll__form form__body" id="form" action="#">
+
+        <form class="enroll__form form__body" id="form" action="#">
           <input class="enroll__form-input input _req" id="formName" placeholder="Ваше имя" type="text" name="name">
-          <input class="enroll__form-input input _req _email" id="formEmail" placeholder="Ваш E-mail" type="email" name="email">
+          <input class="enroll__form-input input _req _email" id="formEmail" placeholder="Ваш E-mail" type="email"
+            name="email">
           <p class="enroll__form-text">*Мы никому не передаем ваши данные.
             И не сохраняем ваш номер в базу.</p>
           <button class="enroll__form-btn btn" type="submit">записаться</button>
@@ -173,7 +174,7 @@
             <div class="info__item">
               <a class="info__item-link" href="info-detalis-01.html">
                 <div class="info__item-image">
-                  <img class="info__item-img" src="images/info-img-1.jpg" alt="фото новостей">
+                  <img class="info__item-img" src="images/info-img-1.webp" alt="фото новостей">
                   <p class="info__item-title">8 МИФОВ ОБ ЭЛЕКТРОЭПИЛЯЦИИ</p>
                   <p class="info__item-date">12.05.22</p>
                 </div>
@@ -188,7 +189,7 @@
             <div class="info__item">
               <a class="info__item-link" href="info-detalis-02.html">
                 <div class="info__item-image">
-                  <img class="info__item-img" src="images/info-img-2.jpg" alt="фото новостей">
+                  <img class="info__item-img" src="images/info-img-2.webp" alt="фото новостей">
                   <p class="info__item-title">Почему же волоски уходят не за 1 сеанс?</p>
                   <p class="info__item-date">27.03.22</p>
                 </div>
@@ -203,7 +204,7 @@
             <div class="info__item">
               <a class="info__item-link" href="info-detalis-03.html">
                 <div class="info__item-image">
-                  <img class="info__item-img" src="images/info-img-3.jpg" alt="фото новостей">
+                  <img class="info__item-img" src="images/info-img-3.webp" alt="фото новостей">
                   <p class="info__item-title">Электроэпиляция - это больно?</p>
                   <p class="info__item-date">26.05.22</p>
                 </div>
@@ -329,18 +330,30 @@
     <div class="container">
       <p class="questions__title title">Есть вопросы?</p>
       <div class="questions__inner">
-        <form class="questions__form" action="#">
-          <div class="questions__form-box">
-            <p class="questions__form-text">*Мы никому не передаем ваши данные.
-              И не сохраняем ваш номер в базу.</p>
-          </div>
-          <div class="questions__form-box">
-            <input class="questions__form-input input" required placeholder="Ваше имя" type="text" name="name">
-            <input class="questions__form-input input" required placeholder="Ваш телефон" type="tel" name="phone">
-            <button class="questions__form-btn btn" type="submit">записаться</button>
-          </div>
+        <div class="questions__item">
+          <a class="questions__link" href="https://wa.me/+79613007002/?text=Здраствуйте! У меня есть вопрос!">
+            <img class="questions__link-img" src="images/icons/social/whatsapp.png" alt="ватсап">
+          </a>
+        </div>
 
-        </form>
+        <div class="questions__item">
+          <a class="questions__link" href="https://telegram.im/@ElectroEpil777" target="_blank">
+            <img class="questions__link-img" src="images/icons/social/telegram.png" alt="телеграм">
+          </a>
+        </div>
+
+        <div class="questions__item">
+          <a class="questions__link" href="https://www.instagram.com/invites/contact/?i=zn4i6vi39j3y&utm_content=1hmwayc">
+            <img class="questions__link-img" src="images/icons/social/instagram.png" alt="инстаграм">
+          </a>
+        </div>
+
+        <div class="questions__item">
+          <a class="questions__link" href="https://vk.com/electroepilationmoscoww">
+            <img class="questions__link-img" src="images/icons/social/vk.png" alt="вк">
+          </a>
+        </div>
+
       </div>
     </div>
 
@@ -398,21 +411,21 @@
                 <a class="footer__box-link" href="mailto:@Electro-Studi.ru">E-mail: @Electro-Studi.ru</a>
               </li>
               <li class="footer__box-item">
-                <p class="footer__box-text">Время работы: 9:00 - 18:00</p>
+                <p class="footer__box-text">Время работы: 10:00 - 22:00 (без выходных)</p>
               </li>
             </ul>
             <div class="footer__social">
+              <a class="footer__social-link" href="https://wa.me/+79613007002/?text=Здраствуйте! У меня есть вопрос!">
+                <img class="footer__social-img" src="images/icons/social/whatsapp-white.png" alt="ватсап">
+              </a>
+              <a class="footer__social-link" href="https://telegram.im/@ElectroEpil777" target="_blank">
+                <img class="footer__social-img" src="images/icons/social/telegram-white.png" alt="телеграм">
+              </a>
+              <a class="footer__social-link" href="https://www.instagram.com/invites/contact/?i=zn4i6vi39j3y&utm_content=1hmwayc">
+                <img class="footer__social-img" src="images/icons/social/instagram-white.png" alt="инстаграм">
+              </a>
               <a class="footer__social-link" href="https://vk.com/electroepilationmoscoww">
-                <img class="footer__social-img" src="images/icons/vk.png" alt="vk">
-              </a>
-              <a class="footer__social-link" href="#">
-                <img class="footer__social-img" src="images/icons/instagram.png" alt="instagram">
-              </a>
-              <a class="footer__social-link" href="#">
-                <img class="footer__social-img" src="images/icons/facebook.png" alt="facebook">
-              </a>
-              <a class="footer__social-link" href="#">
-                <img class="footer__social-img" src="images/icons/youtube.png" alt="youtube">
+                <img class="footer__social-img" src="images/icons/social/vk-white.png" alt="вк">
               </a>
             </div>
           </div>

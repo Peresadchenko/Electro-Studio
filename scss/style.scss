@@ -376,7 +376,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
 }
 .reviews-feedback {
     max-width: 544px;
@@ -484,7 +483,7 @@
 }
 
 .questions {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     position: relative;
     &::after {
         content: "";
@@ -498,24 +497,25 @@
         background: no-repeat center url("../images/bg3.png");
         background-size: 60%;
     }
-    &__form {
+    &__inner {
         display: flex;
+        justify-content: space-around;
     }
-    &__form-box {
-        display: flex;
+    &__item {
+        border-radius: 50%;
+        animation: animate_grow 1s infinite, pulse 1s infinite;
+        transition: all 0.5s;
+        &:hover {
+            animation: none;
+            transform: scale(1.2);
+            box-shadow: 0 0 20px $title;
+            border-radius: 35%;
+        }
     }
-    &__form-text {
-        font-size: 12px;
-        display: inline-block;
-        width: 245px;
-        margin-bottom: 30px;
-    }
-    &__form-input {
-        margin-left: 30px;
-    }
-    &__form-btn {
-        display: inline-block;
-        margin-left: 30px;
+    &__link-img {
+        width: 64px;
+        height: 64px;
+        padding: 5px;
     }
 }
 
@@ -614,6 +614,74 @@
         &:hover {
             opacity: 80%;
         }
+    }
+}
+
+.price {
+    .price-top {
+        margin-bottom: 50px;
+        &__top-text {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+        &__top-Link {
+            font-size: 16px;
+            color: $text;
+            transition: all 0.3s;
+            &:hover {
+                color: $title;
+            }
+        }
+    }
+
+    .price-list {
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0 15px;
+            border-bottom: 1px solid $text;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+    &__item-box {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $title;
+    }
+    .price-list {
+        display: none;
+    }
+    .menu--active {
+        display: block;
+    }
+    .price__item-btn--active {
+        transform: rotate(180deg);
+    }
+    &__item-btn {
+        border: none;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        background: no-repeat 100% / 100% url("../images/icons/dropdown.png");
+        transition: all 0.3s;
+    }
+    &__item-title {
+        @extend %Lighthaus-400;
+        color: $title;
+        font-size: 22px;
+        line-height: 26px;
+        text-transform: uppercase;
     }
 }
 
