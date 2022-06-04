@@ -58,6 +58,13 @@ body {
     }
 }
 
+.price-box {
+    display: none;
+}
+.price-box--active {
+    display: block;
+}
+
 .form__body {
     position: relative;
     padding: 10px;
@@ -68,10 +75,10 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(34, 34, 32, 0.1) center / 120px no-repeat url('../images/icons/loader.gif');
+        background: rgba(34, 34, 32, 0.1) center / 120px no-repeat url("../images/icons/loader.gif");
         opacity: 0;
         visibility: hidden;
-        transition: all .5s;
+        transition: all 0.5s;
     }
 }
 .form__body._sending::after {
@@ -181,7 +188,6 @@ body {
     }
 }
 
-
 @keyframes pulse {
     0% {
         -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
@@ -208,4 +214,3 @@ body {
         transform: translateX(0);
     }
 }
-

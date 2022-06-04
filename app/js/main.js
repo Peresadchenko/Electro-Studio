@@ -92,6 +92,46 @@ $(function () {
 
     menuOpen.addEventListener('click', toggleMenuOpen);
 
+    // _____________price________________
+
+    let intervalId;
+
+    document.querySelectorAll('.price__item-btn').forEach(e => {
+        e.addEventListener('click', e => {
+            const menu = e.currentTarget.dataset.path;
+            document.querySelectorAll('.price-list').forEach(e => {
+                if (!document.querySelector(`[data-target=${menu}]`).classList.contains('open')) {
+                    e.classList.remove('menu--active');
+                    e.classList.remove('open');
+                    document.querySelector(`[data-target=${menu}]`).classList.add('menu--active');
+                    document.querySelector(`[data-path=${menu}]`).classList.add('price__item-btn--active');
+                    intervalId = setTimeout(() => {
+                        document.querySelector(`[data-target=${menu}]`).classList.add('open');
+                    }, 0);
+                }
+
+                if (document.querySelector(`[data-target=${menu}]`).classList.contains('open')) {
+                    clearTimeout(intervalId);
+                    document.querySelector(`[data-target=${menu}]`).classList.remove('menu--active');
+                    document.querySelector(`[data-path=${menu}]`).classList.remove('price__item-btn--active');
+                    intervalId = setTimeout(() => {
+                        document.querySelector(`[data-target=${menu}]`).classList.remove('open');
+                    }, 0);
+                }
+
+                window.onclick = e => {
+                    if (e.target == document.querySelector(`[data-target=${menu}]`) || e.target == document.querySelector(`[data-path=${menu}]`)) {
+                        return;
+                    } else {
+                        document.querySelector(`[data-target=${menu}]`).classList.remove('menu--active');
+                        document.querySelector(`[data-path=${menu}]`).classList.remove('price__item-btn--active');
+                    }
+                }
+            });
+        });
+    });
+
+
     // _____________gallery-slider________________
 
     $('.gallery-slider__inner').slick({
