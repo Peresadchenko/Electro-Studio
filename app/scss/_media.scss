@@ -261,12 +261,31 @@
     }
 }
 
+// ____________700px____________________
+
 @media (max-width: 700px) {
     .benefits {
         &__item {
             max-width: 175px;
         }
     }
+
+    .price {
+        .price-top__top-text {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+        }
+        .price-list__item-textPrice{
+            display: flex;
+            flex-direction: column;
+            align-items:flex-end;
+        }
+        .price-list__item-text {
+            max-width: 300px;
+        }
+    }
+
     .footer {
         &__inner {
             flex-direction: column;
@@ -497,6 +516,12 @@
         }
     }
 
+    .price {
+        .price-list__item-text {
+            max-width: 200px;
+        }
+    }
+    
     .footer {
         &__inner-box {
             flex-direction: column;
