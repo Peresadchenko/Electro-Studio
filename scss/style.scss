@@ -286,6 +286,10 @@
     &__item-text {
         margin-bottom: 15px;
         line-height: 20px;
+        span {
+            font-size: 18px;
+            color: red;
+        }
     }
     &__item-link {
         color: $title;
