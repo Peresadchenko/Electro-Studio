@@ -58,13 +58,6 @@ body {
     }
 }
 
-.price-box {
-    display: none;
-}
-.price-box--active {
-    display: block;
-}
-
 .form__body {
     position: relative;
     padding: 10px;
@@ -174,6 +167,65 @@ body {
     .slick-dots li + li {
         margin-left: 10px;
     }
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+    z-index: 5;
+}
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+.popup:target .popup__content {
+    opacity: 1;
+    transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+}
+.popup__area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+.popup__content {
+    max-width: 100vh;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+.popup__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: all 0.8s;
+    width: 48px;
+    height: 48px;
+    background: center no-repeat url(../images/close.png);
+}
+.popup__close:hover {
+    transform: rotateY(180deg);
+}
+.popup__img {
+    max-height: 100vh;
 }
 
 @keyframes animate_grow {
