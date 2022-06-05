@@ -687,6 +687,45 @@
     }
 }
 
+.about-us {
+    &__box-text {
+        margin-bottom: 50px;
+    }
+    &__box-img {
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+    &__img-cert {
+        max-width: 800px;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__box-popup{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        margin: 30px auto;
+    }
+    &__item {
+        max-width: 600px;
+        width: 100%;
+    }
+    &__img-studio {
+        max-width: 600px;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__item-link {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
 .footer {
     padding-top: 60px;
     padding-bottom: 50px;
